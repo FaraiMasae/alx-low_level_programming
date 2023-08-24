@@ -2,33 +2,33 @@
 
 /**
  * cap_string - uppercasing words
- * @n: pointer
- * Return: n
+ * @str: pointer
+ * Return: str
  */
-char *cap_string(char *n)
+char *cap_string(char *str)
 {
 	int index = 0;
 
-	while (n[index])
+	while (str[index])
 	{
-		while (!(n[index] >= 'a' && n[index] <= 'z'))
+		while (!(str[index] >= 'a' && str[index] <= 'z'))
 			index++;
-		if (n[index - 1] == ' ' ||
-		n[index - 1] == '\t' ||
-		n[index - 1] == '\n' ||
-		n[index - 1] == ',' ||
-		n[index - 1] == ';' ||
-		n[index - 1] == '.' ||
-		n[index - 1] == '!' ||
-		n[index - 1] == '?' ||
-		n[index - 1] == '"' ||
-		n[index - 1] == '(' ||
-		n[index - 1] == ')' ||
-		n[index - 1] == '{' ||
-		n[index - 1] == '}' ||
+		if (str[index - 1] == ' ' ||
+		str[index - 1] == '\t' ||
+		str[index - 1] == '\n' ||
+		str[index - 1] == ',' ||
+		str[index - 1] == ';' ||
+		str[index - 1] == '.' ||
+		str[index - 1] == '!' ||
+		str[index - 1] == '?' ||
+		str[index - 1] == '"' ||
+		str[index - 1] == '(' ||
+		str[index - 1] == ')' ||
+		str[index - 1] == '{' ||
+		str[index - 1] == '}' ||
 		index == 0)
-			n[index] -= 32;
-		n++;
+			str[index] -= 32;
+		str++;
 	}
-	return (n);
+	return (str);
 }
